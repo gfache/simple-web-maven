@@ -11,7 +11,7 @@ pipeline {
             post {
                 success {
                     echo 'Now Archiving...'
-                    archiveArtifacts artifacts: '**/target/*.war'
+                    archiveArtifacts artifacts: '**/*.war'
                 }
             }
         }
@@ -35,7 +35,7 @@ pipeline {
                 }
 
                 failure {
-                    echo ' Deployment failed.'
+                    echo 'Deployment failed.'
                 }
             }
         }
